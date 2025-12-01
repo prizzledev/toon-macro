@@ -1,0 +1,75 @@
+# Build artifacts
+/target/
+**/target/
+
+# Cargo lock file (for library crates)
+Cargo.lock
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.*.swp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Rust specific
+**/*.rs.bk
+*.pdb
+
+# Documentation build output
+/doc/
+
+# Coverage reports
+*.gcno
+*.gcda
+*.gcov
+coverage/
+*.profraw
+*.profdata
+lcov.info
+tarpaulin-report.html
+
+# Benchmark output
+criterion/
+
+# Debug files
+*.dSYM/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Backup files
+*.bak
+*.backup
+
+# Package manager directories
+node_modules/
+
+# Build tool caches
+.cargo/
+!.cargo/config.toml
+
+# Coding Agents
+.claude

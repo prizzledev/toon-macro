@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = ["toon-macro", "toon-macro-derive"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["prizzledev"]
+license = "MIT"
+repository = "https://github.com/prizzledev/toon-macro"
+keywords = ["toon", "serde", "macro", "serialization", "json"]
+categories = ["encoding", "parser-implementations"]
+rust-version = "1.70"
+
+[workspace.dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_toon2 = "0.1"
+thiserror = "2.0"
+syn = { version = "2.0", features = ["full", "extra-traits"] }
+quote = "1.0"
+proc-macro2 = "1.0"

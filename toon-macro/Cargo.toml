@@ -1,0 +1,27 @@
+[package]
+name = "toon-macro"
+description = "Ergonomic macros for constructing and parsing TOON (Token-Oriented Object Notation) values"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version.workspace = true
+readme = "../README.md"
+
+[dependencies]
+serde = { workspace = true, optional = true }
+serde_toon2 = { workspace = true }
+thiserror = { workspace = true }
+toon-macro-derive = { path = "../toon-macro-derive", optional = true }
+
+[dev-dependencies]
+serde = { workspace = true }
+
+[features]
+default = ["serde"]
+serde = ["dep:serde"]
+derive = ["dep:toon-macro-derive"]
+pretty = []
