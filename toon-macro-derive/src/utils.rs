@@ -50,7 +50,6 @@ impl FieldAttrs {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;

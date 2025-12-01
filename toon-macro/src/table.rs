@@ -98,7 +98,9 @@ pub trait ToonTable: Sized {
     fn get_row(value: &Value, index: usize) -> Result<Self> {
         let rows = Self::from_toon_table(value)?;
         let len = rows.len();
-        rows.into_iter().nth(index).ok_or(Error::RowOutOfBounds { index, len })
+        rows.into_iter()
+            .nth(index)
+            .ok_or(Error::RowOutOfBounds { index, len })
     }
 }
 
@@ -189,7 +191,8 @@ pub fn get_cell(row: &Value, index: usize) -> Result<&Value> {
     match row {
         Value::Array(arr) => {
             let len = arr.len();
-            arr.get(index).ok_or(Error::ColumnOutOfBounds { index, len })
+            arr.get(index)
+                .ok_or(Error::ColumnOutOfBounds { index, len })
         }
         _ => Err(Error::InvalidTable("row must be an array".into())),
     }

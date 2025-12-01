@@ -2,7 +2,7 @@
 //!
 //! Run with: cargo run --example tables --features derive
 
-use toon_macro::{toon, to_toon_string, ToonTable, Value};
+use toon_macro::{to_toon_string, toon, ToonTable, Value};
 
 #[derive(Debug, Clone, PartialEq, ToonTable)]
 struct User {
@@ -37,9 +37,21 @@ fn main() {
     // Example 1: Basic table encoding
     println!("1. Basic table encoding:");
     let users = vec![
-        User { id: 1, name: "Alice".into(), role: "admin".into() },
-        User { id: 2, name: "Bob".into(), role: "user".into() },
-        User { id: 3, name: "Charlie".into(), role: "user".into() },
+        User {
+            id: 1,
+            name: "Alice".into(),
+            role: "admin".into(),
+        },
+        User {
+            id: 2,
+            name: "Bob".into(),
+            role: "user".into(),
+        },
+        User {
+            id: 3,
+            name: "Charlie".into(),
+            role: "user".into(),
+        },
     ];
 
     println!("   Columns: {:?}", User::COLUMNS);
@@ -71,8 +83,16 @@ fn main() {
     // Example 3: Roundtrip encoding/decoding
     println!("3. Roundtrip encoding/decoding:");
     let original = vec![
-        User { id: 100, name: "Test1".into(), role: "role1".into() },
-        User { id: 101, name: "Test2".into(), role: "role2".into() },
+        User {
+            id: 100,
+            name: "Test1".into(),
+            role: "role1".into(),
+        },
+        User {
+            id: 101,
+            name: "Test2".into(),
+            role: "role2".into(),
+        },
     ];
 
     let encoded = User::to_toon_table(&original);
@@ -86,8 +106,18 @@ fn main() {
     // Example 4: Renamed columns
     println!("4. Renamed columns with #[toon(rename)]:");
     let products = vec![
-        Product { id: 1, name: "Widget".into(), price: 9.99, category: "Tools".into() },
-        Product { id: 2, name: "Gadget".into(), price: 19.99, category: "Electronics".into() },
+        Product {
+            id: 1,
+            name: "Widget".into(),
+            price: 9.99,
+            category: "Tools".into(),
+        },
+        Product {
+            id: 2,
+            name: "Gadget".into(),
+            price: 19.99,
+            category: "Electronics".into(),
+        },
     ];
 
     println!("   Columns: {:?}", Product::COLUMNS);
@@ -97,7 +127,9 @@ fn main() {
         if let Some(Value::Array(cols)) = map.get("columns") {
             print!("   Column names in table: ");
             for (i, col) in cols.iter().enumerate() {
-                if i > 0 { print!(", "); }
+                if i > 0 {
+                    print!(", ");
+                }
                 if let Value::String(s) = col {
                     print!("{}", s);
                 }
@@ -131,7 +163,7 @@ fn main() {
     println!("6. Mixed types (i64, u64, f64, bool, String):");
     let employees = vec![
         Employee {
-            id: -1,  // negative i64
+            id: -1, // negative i64
             name: "Temp Worker".into(),
             department: "Temp".into(),
             salary: 0.0,
@@ -164,8 +196,16 @@ fn main() {
     // Example 7: Serialize table to TOON string
     println!("7. Table as TOON string:");
     let users = vec![
-        User { id: 1, name: "Alice".into(), role: "admin".into() },
-        User { id: 2, name: "Bob".into(), role: "user".into() },
+        User {
+            id: 1,
+            name: "Alice".into(),
+            role: "admin".into(),
+        },
+        User {
+            id: 2,
+            name: "Bob".into(),
+            role: "user".into(),
+        },
     ];
     let table = User::to_toon_table(&users);
 

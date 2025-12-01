@@ -2,7 +2,7 @@
 //!
 //! Run with: cargo run --example basic
 
-use toon_macro::{toon, toon_str, from_toon_str, to_toon_string};
+use toon_macro::{from_toon_str, to_toon_string, toon, toon_str};
 
 fn main() {
     println!("=== toon-macro Basic Examples ===\n");
@@ -68,11 +68,13 @@ fn main() {
 
     // Example 6: Using toon_str! for TOON format parsing
     println!("6. Parsing TOON format with toon_str!:");
-    let parsed = toon_str!(r#"
+    let parsed = toon_str!(
+        r#"
 title: "My Document"
 version: 1
 author: "John Doe"
-"#);
+"#
+    );
     println!("   Parsed: {:?}\n", parsed);
 
     // Example 7: Error handling with from_toon_str

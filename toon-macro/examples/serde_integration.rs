@@ -3,7 +3,10 @@
 //! Run with: cargo run --example serde_integration
 
 use serde::{Deserialize, Serialize};
-use toon_macro::{serialize, deserialize, toon, value::{to_value, from_value}};
+use toon_macro::{
+    deserialize, serialize, toon,
+    value::{from_value, to_value},
+};
 
 #[derive(Debug, Serialize, Deserialize, PartialEq)]
 struct User {

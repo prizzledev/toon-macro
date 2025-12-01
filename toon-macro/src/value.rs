@@ -3,9 +3,9 @@
 //! This module re-exports the [`Value`] type from `serde_toon2` and provides
 //! additional helper functions for working with TOON values.
 
-pub use serde_toon2::Value;
-pub use serde_toon2::Number;
 pub use serde_toon2::Map;
+pub use serde_toon2::Number;
+pub use serde_toon2::Value;
 
 /// Extension trait for constructing Value from additional types.
 ///
@@ -175,7 +175,10 @@ mod tests {
     #[test]
     fn test_string_conversion() {
         assert_eq!(Value::from("hello"), Value::String("hello".to_string()));
-        assert_eq!(Value::from("world".to_string()), Value::String("world".to_string()));
+        assert_eq!(
+            Value::from("world".to_string()),
+            Value::String("world".to_string())
+        );
     }
 
     #[test]

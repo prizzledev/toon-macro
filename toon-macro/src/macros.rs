@@ -348,7 +348,10 @@ mod tests {
         });
 
         if let Value::Object(map) = v {
-            assert_eq!(map.get("kebab-key"), Some(&Value::String("value".to_string())));
+            assert_eq!(
+                map.get("kebab-key"),
+                Some(&Value::String("value".to_string()))
+            );
             assert!(map.contains_key("key with spaces"));
         } else {
             panic!("Expected object");
