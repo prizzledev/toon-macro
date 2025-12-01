@@ -1,6 +1,6 @@
 [package]
 name = "toon-macro-derive"
-description = "Procedural macros for toon-macro crate"
+description = "Procedural macros for toon-macro crate (internal implementation detail - use toon-macro with 'derive' feature instead)"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
@@ -9,6 +9,7 @@ repository.workspace = true
 rust-version.workspace = true
 keywords = ["toon", "macro", "derive", "serialization"]
 categories = ["encoding", "development-tools::procedural-macro-helpers"]
+documentation = "https://docs.rs/toon-macro"
 
 [lib]
 proc-macro = true
