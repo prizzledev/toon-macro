@@ -15,7 +15,7 @@ readme = "../README.md"
 serde = { workspace = true, optional = true }
 serde_toon2 = { workspace = true }
 thiserror = { workspace = true }
-toon-macro-derive = { path = "../toon-macro-derive", version = "0.1.0", optional = true }
+toon-macro-derive = { path = "../toon-macro-derive", version = "0.1.1", optional = true }
 
 [dev-dependencies]
 serde = { workspace = true }
