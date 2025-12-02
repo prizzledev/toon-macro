@@ -25,3 +25,7 @@ default = ["serde"]
 serde = ["dep:serde"]
 derive = ["dep:toon-macro-derive"]
 pretty = []
+
+[[example]]
+name = "tables"
+required-features = ["derive"]

@@ -3,7 +3,7 @@
 [![Crates.io](https://img.shields.io/crates/v/toon-macro.svg)](https://crates.io/crates/toon-macro)
 [![Documentation](https://docs.rs/toon-macro/badge.svg)](https://docs.rs/toon-macro)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Rust](https://img.shields.io/badge/rust-1.70%2B-orange.svg)](https://www.rust-lang.org)
+[![Rust](https://img.shields.io/badge/rust-1.85%2B-orange.svg)](https://www.rust-lang.org)
 
 Ergonomic macros for constructing and parsing TOON (Token-Oriented Object Notation) values in Rust.
 
@@ -172,7 +172,7 @@ TOON (Token-Oriented Object Notation) is designed to be:
 
 ## Minimum Supported Rust Version
 
-This crate requires Rust 1.70 or later.
+This crate requires Rust 1.85 or later (due to `serde_toon2` using Rust 2024 edition).
 
 ## License
 

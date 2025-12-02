@@ -4,13 +4,13 @@ members = ["toon-macro", "toon-macro-derive"]
 
 [workspace.package]
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 authors = ["prizzledev"]
 license = "MIT"
 repository = "https://github.com/prizzledev/toon-macro"
 keywords = ["toon", "serde", "macro", "serialization", "json"]
 categories = ["encoding", "parser-implementations"]
-rust-version = "1.70"
+rust-version = "1.85"
 
 [workspace.dependencies]
 serde = { version = "1.0", features = ["derive"] }
