@@ -3,7 +3,7 @@
 use proc_macro::TokenStream;
 use proc_macro2::TokenStream as TokenStream2;
 use quote::quote;
-use syn::{parse_macro_input, Data, DeriveInput, Error, Fields, Result};
+use syn::{Data, DeriveInput, Error, Fields, Result, parse_macro_input};
 
 use crate::utils::FieldAttrs;
 
@@ -29,14 +29,14 @@ fn derive_toon_table_impl(input: &DeriveInput) -> Result<TokenStream2> {
                 return Err(Error::new_spanned(
                     input,
                     "ToonTable can only be derived for structs with named fields",
-                ))
+                ));
             }
         },
         _ => {
             return Err(Error::new_spanned(
                 input,
                 "ToonTable can only be derived for structs",
-            ))
+            ));
         }
     };
 

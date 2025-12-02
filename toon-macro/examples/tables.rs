@@ -2,7 +2,7 @@
 //!
 //! Run with: cargo run --example tables --features derive
 
-use toon_macro::{to_toon_string, toon, ToonTable, Value};
+use toon_macro::{ToonTable, Value, to_toon_string, toon};
 
 #[derive(Debug, Clone, PartialEq, ToonTable)]
 struct User {

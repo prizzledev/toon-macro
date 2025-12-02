@@ -2,7 +2,7 @@
 
 #![cfg(feature = "derive")]
 
-use toon_macro::{toon, ToonTable, Value};
+use toon_macro::{ToonTable, Value, toon};
 
 #[derive(Debug, Clone, PartialEq, ToonTable)]
 struct User {
